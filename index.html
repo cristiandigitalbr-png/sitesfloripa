@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Sites profissionais para empresas e profissionais de Florianópolis. Design moderno, responsivo e otimizado para conversão.">
+<meta property="og:title" content="Sites Floripa | Sites Profissionais em Florianópolis">
+<meta property="og:description" content="Sites profissionais para empresas e profissionais de Florianópolis.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://sites-floripa.com.br">
+<title>Sites Floripa | Sites Profissionais em Florianópolis</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+:root {
+  --beige: #F5F1EA;
+  --beige-dark: #EDE8DF;
+  --branco: #FFFFFF;
+  --preto: #1A1A1A;
+  --cinza: #7A7A7A;
+  --dourado: #C9A96E;
+  --dourado-claro: #E2C99A;
+}
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+body{font-family:'Inter',sans-serif;background:var(--beige);color:var(--preto);font-weight:300;-webkit-font-smoothing:antialiased;overflow-x:hidden;}
+
+nav{position:fixed;top:0;left:0;right:0;z-index:100;padding:20px 60px;display:flex;justify-content:space-between;align-items:center;background:rgba(245,241,234,0.93);backdrop-filter:blur(10px);border-bottom:1px solid rgba(201,169,110,0.15);transition:all 0.3s;}
+.nav-logo{font-family:'Cormorant Garamond',serif;font-size:22px;font-weight:600;color:var(--preto);letter-spacing:0.5px;text-decoration:none;}
+.nav-logo span{color:var(--dourado);}
+.nav-cta{display:inline-flex;align-items:center;gap:8px;background:var(--preto);color:var(--branco);padding:11px 24px;border-radius:2px;font-size:12px;font-weight:500;letter-spacing:1.5px;text-transform:uppercase;text-decoration:none;transition:background 0.3s,transform 0.2s;}
+.nav-cta:hover{background:var(--dourado);transform:translateY(-1px);}
+
+.hero{min-height:100vh;display:grid;grid-template-columns:1fr 1fr;align-items:center;padding:120px 60px 80px;gap:60px;position:relative;overflow:hidden;}
+.hero::before{content:'';position:absolute;top:-200px;right:-200px;width:600px;height:600px;border-radius:50%;background:radial-gradient(circle,rgba(201,169,110,0.1) 0%,transparent 70%);pointer-events:none;}
+.hero-content{position:relative;z-index:1;}
+.hero-eyebrow{display:inline-flex;align-items:center;gap:10px;font-size:11px;font-weight:500;letter-spacing:3px;text-transform:uppercase;color:var(--dourado);margin-bottom:28px;}
+.hero-eyebrow::before{content:'';width:32px;height:1px;background:var(--dourado);}
+.hero h1{font-family:'Cormorant Garamond',serif;font-size:clamp(36px,4.5vw,56px);font-weight:500;line-height:1.15;color:var(--preto);margin-bottom:22px;letter-spacing:-0.5px;}
+.hero h1 em{font-style:italic;color:var(--dourado);font-weight:400;}
+.hero-sub{font-size:17px;line-height:1.75;color:var(--cinza);max-width:440px;margin-bottom:44px;}
+.hero-btns{display:flex;gap:14px;flex-wrap:wrap;}
+.btn-primary{display:inline-flex;align-items:center;gap:8px;background:var(--preto);color:var(--branco);padding:15px 30px;border-radius:2px;font-size:13px;font-weight:500;letter-spacing:1px;text-decoration:none;transition:background 0.3s,transform 0.2s;}
+.btn-primary:hover{background:var(--dourado);transform:translateY(-2px);}
+.btn-secondary{display:inline-flex;align-items:center;gap:8px;background:transparent;color:var(--preto);padding:15px 30px;border-radius:2px;border:1px solid rgba(26,26,26,0.25);font-size:13px;font-weight:400;letter-spacing:1px;text-decoration:none;transition:all 0.3s;}
+.btn-secondary:hover{border-color:var(--dourado);color:var(--dourado);}
+
+.hero-visual{position:relative;z-index:1;display:flex;align-items:center;justify-content:center;}
+.mockup-wrap{position:relative;width:100%;max-width:520px;}
+.mockup-notebook{width:100%;background:#1e1e1e;border-radius:12px 12px 0 0;padding:10px 10px 0;box-shadow:0 40px 80px rgba(26,26,26,0.2),0 0 0 1px rgba(0,0,0,0.1);}
+.mockup-bar{display:flex;align-items:center;gap:6px;padding:8px 12px;background:#2a2a2a;border-radius:6px 6px 0 0;}
+.mockup-dot{width:8px;height:8px;border-radius:50%;}
+.mockup-dot:nth-child(1){background:#FF5F57;}
+.mockup-dot:nth-child(2){background:#FFBD2E;}
+.mockup-dot:nth-child(3){background:#28CA41;}
+.mockup-url{flex:1;background:#3a3a3a;border-radius:3px;height:18px;margin-left:12px;}
+.mockup-screen{background:var(--beige);aspect-ratio:16/10;border-radius:0 0 2px 2px;overflow:hidden;display:flex;flex-direction:column;}
+.screen-nav-bar{height:36px;background:var(--branco);border-bottom:1px solid rgba(0,0,0,0.06);display:flex;align-items:center;padding:0 16px;gap:20px;}
+.screen-logo-pill{width:60px;height:8px;background:#1A1A1A;border-radius:2px;}
+.screen-nav-links{display:flex;gap:12px;margin-left:auto;}
+.screen-nav-link{width:28px;height:6px;background:#D0D0D0;border-radius:2px;}
+.screen-nav-btn{width:40px;height:18px;background:#C9A96E;border-radius:2px;}
+.screen-hero{flex:1;display:flex;align-items:center;padding:16px;gap:12px;background:linear-gradient(135deg,#F5F1EA 0%,#EDE8DF 100%);}
+.screen-text-block{flex:1;display:flex;flex-direction:column;gap:8px;}
+.screen-h1{height:10px;background:#1A1A1A;border-radius:2px;width:80%;}
+.screen-h1-2{height:10px;background:#1A1A1A;border-radius:2px;width:60%;}
+.screen-p{height:5px;background:#C0BAB0;border-radius:2px;}
+.screen-p.w70{width:70%;}
+.screen-p.w55{width:55%;}
+.screen-btns{display:flex;gap:6px;margin-top:4px;}
+.screen-btn-a{height:16px;width:60px;background:#1A1A1A;border-radius:2px;}
+.screen-btn-b{height:16px;width:60px;background:transparent;border:1px solid #C0BAB0;border-radius:2px;}
+.screen-img-block{width:38%;background:linear-gradient(135deg,rgba(201,169,110,0.15),rgba(201,169,110,0.35));border-radius:4px;display:flex;align-items:center;justify-content:center;aspect-ratio:1;}
+.screen-img-icon{font-size:24px;opacity:0.5;}
+.mockup-base{height:16px;background:#2a2a2a;border-radius:0 0 8px 8px;margin:0 -2px;}
+.mockup-stand{width:40%;height:10px;background:#222;margin:0 auto;border-radius:0 0 4px 4px;}
+.mockup-foot{width:60%;height:3px;background:#333;margin:0 auto;border-radius:2px;}
+.mockup-glow{position:absolute;bottom:-60px;left:50%;transform:translateX(-50%);width:80%;height:60px;background:radial-gradient(ellipse,rgba(201,169,110,0.25) 0%,transparent 70%);pointer-events:none;}
+
+section{padding:100px 60px;}
+.section-tag{display:inline-flex;align-items:center;gap:10px;font-size:11px;font-weight:500;letter-spacing:3px;text-transform:uppercase;color:var(--dourado);margin-bottom:20px;}
+.section-tag::before{content:'';width:24px;height:1px;background:var(--dourado);}
+.section-title{font-family:'Cormorant Garamond',serif;font-size:clamp(28px,4vw,44px);font-weight:500;line-height:1.2;color:var(--preto);margin-bottom:16px;letter-spacing:-0.3px;}
+.section-title em{font-style:italic;color:var(--dourado);}
+.section-divider{width:40px;height:1px;background:var(--dourado);margin-bottom:52px;opacity:0.7;}
+
+.beneficios{background:var(--branco);}
+.beneficios-header{text-align:center;}
+.beneficios-header .section-divider{margin-left:auto;margin-right:auto;}
+.beneficios-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:20px;max-width:1100px;margin:0 auto;}
+.beneficio-card{background:var(--beige);border-radius:4px;padding:32px 20px;text-align:center;border:1px solid rgba(201,169,110,0.12);opacity:0;transform:translateY(24px);transition:opacity 0.5s,transform 0.5s,box-shadow 0.3s;}
+.beneficio-card.visible{opacity:1;transform:translateY(0);}
+.beneficio-card:hover{box-shadow:0 8px 32px rgba(26,26,26,0.08);transform:translateY(-4px);}
+.beneficio-icon{width:48px;height:48px;background:var(--preto);border-radius:50%;display:flex;align-items:center;justify-content:center;margin:0 auto 18px;font-size:20px;}
+.beneficio-card h3{font-family:'Cormorant Garamond',serif;font-size:16px;font-weight:600;color:var(--preto);margin-bottom:8px;}
+.beneficio-card p{font-size:13px;line-height:1.6;color:var(--cinza);}
+
+.portfolio{background:var(--beige);}
+.portfolio-header{text-align:center;}
+.portfolio-header .section-divider{margin-left:auto;margin-right:auto;}
+.portfolio-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:28px;max-width:1100px;margin:0 auto;}
+.portfolio-card{border-radius:6px;overflow:hidden;background:var(--branco);box-shadow:0 4px 24px rgba(26,26,26,0.06);opacity:0;transform:translateY(24px);transition:opacity 0.6s,transform 0.6s,box-shadow 0.3s;}
+.portfolio-card.visible{opacity:1;transform:translateY(0);}
+.portfolio-card:hover{transform:translateY(-6px);box-shadow:0 20px 50px rgba(26,26,26,0.12);}
+.portfolio-thumb{aspect-ratio:16/10;display:flex;align-items:center;justify-content:center;font-size:48px;position:relative;overflow:hidden;}
+.portfolio-thumb::after{content:'';position:absolute;inset:0;background:linear-gradient(to bottom,transparent 50%,rgba(0,0,0,0.4) 100%);}
+.portfolio-tag{position:absolute;bottom:14px;left:14px;z-index:1;background:var(--dourado);color:var(--branco);font-size:10px;font-weight:500;letter-spacing:1.5px;text-transform:uppercase;padding:5px 12px;border-radius:2px;}
+.portfolio-body{padding:24px 22px;}
+.portfolio-body h3{font-family:'Cormorant Garamond',serif;font-size:20px;font-weight:600;color:var(--preto);margin-bottom:8px;}
+.portfolio-body p{font-size:13px;line-height:1.6;color:var(--cinza);}
+.portfolio-pills{display:flex;gap:8px;flex-wrap:wrap;margin-top:14px;}
+.pill{font-size:11px;color:var(--cinza);border:1px solid rgba(0,0,0,0.12);padding:4px 10px;border-radius:20px;}
+
+.preco{background:var(--preto);}
+.preco-inner{max-width:700px;margin:0 auto;text-align:center;}
+.preco .section-tag{justify-content:center;}
+.preco .section-title{color:var(--branco);}
+.preco .section-title em{color:var(--dourado);}
+.preco .section-divider{margin-left:auto;margin-right:auto;background:rgba(201,169,110,0.4);}
+.preco-valor{font-family:'Cormorant Garamond',serif;font-size:80px;font-weight:600;color:var(--dourado);line-height:1;letter-spacing:-2px;margin:24px 0 8px;}
+.preco-valor sup{font-size:32px;vertical-align:super;letter-spacing:0;}
+.preco-desc{font-size:15px;color:rgba(255,255,255,0.55);margin-bottom:40px;line-height:1.6;}
+.preco-features{display:flex;gap:28px;justify-content:center;flex-wrap:wrap;margin-bottom:44px;}
+.preco-feature{display:flex;align-items:center;gap:8px;font-size:13px;color:rgba(255,255,255,0.7);}
+.preco-feature::before{content:'✓';color:var(--dourado);font-weight:600;}
+.btn-dourado{display:inline-flex;align-items:center;gap:10px;background:var(--dourado);color:var(--branco);padding:18px 40px;border-radius:2px;font-size:13px;font-weight:500;letter-spacing:1.5px;text-transform:uppercase;text-decoration:none;transition:background 0.3s,transform 0.2s;}
+.btn-dourado:hover{background:var(--dourado-claro);transform:translateY(-2px);}
+
+.processo{background:var(--branco);}
+.processo-header{text-align:center;}
+.processo-header .section-divider{margin-left:auto;margin-right:auto;}
+.processo-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:0;max-width:1000px;margin:0 auto;position:relative;}
+.processo-grid::before{content:'';position:absolute;top:28px;left:12.5%;right:12.5%;height:1px;background:linear-gradient(to right,var(--dourado),rgba(201,169,110,0.2),var(--dourado));z-index:0;}
+.processo-step{display:flex;flex-direction:column;align-items:center;text-align:center;padding:0 20px;position:relative;z-index:1;opacity:0;transform:translateY(20px);}
+.processo-step.visible{opacity:1;transform:translateY(0);transition:opacity 0.5s,transform 0.5s;}
+.passo-num{width:56px;height:56px;border-radius:50%;background:var(--branco);border:1.5px solid var(--dourado);display:flex;align-items:center;justify-content:center;font-family:'Cormorant Garamond',serif;font-size:20px;font-weight:600;color:var(--dourado);margin-bottom:24px;}
+.processo-step h3{font-family:'Cormorant Garamond',serif;font-size:18px;font-weight:600;color:var(--preto);margin-bottom:10px;}
+.processo-step p{font-size:13px;line-height:1.6;color:var(--cinza);}
+
+.cta-final{background:linear-gradient(135deg,var(--beige) 0%,var(--beige-dark) 100%);text-align:center;}
+.cta-final-inner{max-width:660px;margin:0 auto;}
+.cta-final .section-title{font-size:clamp(28px,4vw,50px);}
+.cta-final-sub{font-size:16px;color:var(--cinza);margin-bottom:44px;line-height:1.7;}
+.cta-final-btns{display:flex;gap:14px;justify-content:center;flex-wrap:wrap;}
+
+footer{background:var(--preto);padding:48px 60px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:20px;}
+.footer-logo{font-family:'Cormorant Garamond',serif;font-size:20px;font-weight:600;color:var(--branco);text-decoration:none;}
+.footer-logo span{color:var(--dourado);}
+.footer-mid{text-align:center;}
+.footer-local{font-size:12px;color:rgba(255,255,255,0.4);letter-spacing:1px;margin-bottom:8px;}
+.footer-wa{display:inline-flex;align-items:center;gap:8px;color:var(--dourado);font-size:13px;text-decoration:none;transition:opacity 0.3s;}
+.footer-wa:hover{opacity:0.75;}
+.footer-copy{font-size:11px;color:rgba(255,255,255,0.3);letter-spacing:0.5px;}
+
+.fade-up{opacity:0;transform:translateY(28px);transition:opacity 0.6s ease,transform 0.6s ease;}
+.fade-up.visible{opacity:1;transform:translateY(0);}
+
+@media(max-width:900px){
+  nav{padding:18px 24px;}
+  section{padding:72px 24px;}
+  .hero{grid-template-columns:1fr;padding:110px 24px 60px;text-align:center;}
+  .hero::before{display:none;}
+  .hero-sub{margin:0 auto 36px;}
+  .hero-eyebrow{justify-content:center;}
+  .hero-btns{justify-content:center;}
+  .hero-visual{order:-1;max-width:380px;margin:0 auto;}
+  .beneficios-grid{grid-template-columns:repeat(2,1fr);}
+  .portfolio-grid{grid-template-columns:1fr;max-width:440px;margin:0 auto;}
+  .processo-grid{grid-template-columns:1fr 1fr;gap:40px;}
+  .processo-grid::before{display:none;}
+  footer{flex-direction:column;text-align:center;padding:40px 24px;}
+  .footer-mid{order:-1;}
+}
+@media(max-width:560px){
+  .beneficios-grid{grid-template-columns:1fr;}
+  .processo-grid{grid-template-columns:1fr;}
+  .preco-valor{font-size:60px;}
+}
+</style>
+</head>
+<body>
+
+<nav>
+  <a href="#" class="nav-logo">Sites<span>Floripa</span></a>
+  <a href="https://wa.me/5548999999999?text=Olá%2C%20gostaria%20de%20solicitar%20um%20orçamento%20de%20site." target="_blank" class="nav-cta">💬 Solicitar orçamento</a>
+</nav>
+
+<section class="hero">
+  <div class="hero-content">
+    <p class="hero-eyebrow">Florianópolis · SC</p>
+    <h1>Seu negócio transmite <em>confiança</em> na internet?</h1>
+    <p class="hero-sub">Sites profissionais para empresas e profissionais de Florianópolis. Design moderno, responsivo e pensado para converter visitantes em clientes.</p>
+    <div class="hero-btns">
+      <a href="https://wa.me/5548999999999?text=Olá%2C%20gostaria%20de%20solicitar%20um%20orçamento%20de%20site." target="_blank" class="btn-primary">Solicitar orçamento</a>
+      <a href="https://wa.me/5548999999999" target="_blank" class="btn-secondary">💬 Falar no WhatsApp</a>
+    </div>
+  </div>
+
+  <div class="hero-visual">
+    <div class="mockup-wrap">
+      <div class="mockup-notebook">
+        <div class="mockup-bar">
+          <div class="mockup-dot"></div>
+          <div class="mockup-dot"></div>
+          <div class="mockup-dot"></div>
+          <div class="mockup-url"></div>
+        </div>
+        <div class="mockup-screen">
+          <div class="screen-nav-bar">
+            <div class="screen-logo-pill"></div>
+            <div class="screen-nav-links">
+              <div class="screen-nav-link"></div>
+              <div class="screen-nav-link"></div>
+              <div class="screen-nav-link"></div>
+            </div>
+            <div class="screen-nav-btn"></div>
+          </div>
+          <div class="screen-hero">
+            <div class="screen-text-block">
+              <div class="screen-h1"></div>
+              <div class="screen-h1-2"></div>
+              <div style="height:10px;"></div>
+              <div class="screen-p w70"></div>
+              <div class="screen-p w55"></div>
+              <div class="screen-btns">
+                <div class="screen-btn-a"></div>
+                <div class="screen-btn-b"></div>
+              </div>
+            </div>
+            <div class="screen-img-block">
+              <div class="screen-img-icon">🌐</div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="mockup-base"></div>
+      <div class="mockup-stand"></div>
+      <div class="mockup-foot"></div>
+      <div class="mockup-glow"></div>
+    </div>
+  </div>
+</section>
+
+<section class="beneficios">
+  <div class="beneficios-header fade-up">
+    <p class="section-tag">Por que investir</p>
+    <h2 class="section-title">Por que investir em um site <em>profissional?</em></h2>
+    <div class="section-divider"></div>
+  </div>
+  <div class="beneficios-grid">
+    <div class="beneficio-card">
+      <div class="beneficio-icon">🏆</div>
+      <h3>Mais credibilidade</h3>
+      <p>Transmita confiança desde o primeiro contato com seus clientes.</p>
+    </div>
+    <div class="beneficio-card" style="transition-delay:0.1s">
+      <div class="beneficio-icon">🌐</div>
+      <h3>Presença online profissional</h3>
+      <p>Esteja onde seus clientes procuram — na internet, 24h por dia.</p>
+    </div>
+    <div class="beneficio-card" style="transition-delay:0.2s">
+      <div class="beneficio-icon">⭐</div>
+      <h3>Melhor experiência</h3>
+      <p>Navegação fluida e intuitiva para seus clientes em qualquer dispositivo.</p>
+    </div>
+    <div class="beneficio-card" style="transition-delay:0.3s">
+      <div class="beneficio-icon">💬</div>
+      <h3>Integração com WhatsApp</h3>
+      <p>Botão de contato direto para facilitar conversas com potenciais clientes.</p>
+    </div>
+    <div class="beneficio-card" style="transition-delay:0.4s">
+      <div class="beneficio-icon">📱</div>
+      <h3>Visual moderno e responsivo</h3>
+      <p>Design elegante que funciona perfeitamente no celular e no computador.</p>
+    </div>
+  </div>
+</section>
+
+<section class="portfolio">
+  <div class="portfolio-header fade-up">
+    <p class="section-tag">Projetos</p>
+    <h2 class="section-title">Alguns <em>exemplos</em></h2>
+    <div class="section-divider"></div>
+  </div>
+  <div class="portfolio-grid">
+    <div class="portfolio-card">
+      <div class="portfolio-thumb" style="background:linear-gradient(135deg,#1a2a3a 0%,#2d4a6b 100%);">
+        <span style="font-size:52px;z-index:1;">⚖️</span>
+        <span class="portfolio-tag">Advocacia</span>
+      </div>
+      <div class="portfolio-body">
+        <h3>Escritório de Advocacia</h3>
+        <p>Presença digital sólida para um escritório especializado em direito civil e trabalhista em Florianópolis.</p>
+        <div class="portfolio-pills">
+          <span class="pill">Design institucional</span>
+          <span class="pill">SEO local</span>
+          <span class="pill">WhatsApp</span>
+        </div>
+      </div>
+    </div>
+    <div class="portfolio-card" style="transition-delay:0.15s">
+      <div class="portfolio-thumb" style="background:linear-gradient(135deg,#3a1a2a 0%,#7a3a5a 100%);">
+        <span style="font-size:52px;z-index:1;">✨</span>
+        <span class="portfolio-tag">Estética</span>
+      </div>
+      <div class="portfolio-body">
+        <h3>Clínica de Estética</h3>
+        <p>Site elegante e moderno para clínica especializada em tratamentos faciais e corporais premium.</p>
+        <div class="portfolio-pills">
+          <span class="pill">Design premium</span>
+          <span class="pill">Agendamento</span>
+          <span class="pill">Galeria</span>
+        </div>
+      </div>
+    </div>
+    <div class="portfolio-card" style="transition-delay:0.3s">
+      <div class="portfolio-thumb" style="background:linear-gradient(135deg,#1a2a2a 0%,#2a5a5a 100%);">
+        <span style="font-size:52px;z-index:1;">🧠</span>
+        <span class="portfolio-tag">Psicologia</span>
+      </div>
+      <div class="portfolio-body">
+        <h3>Consultório de Psicologia</h3>
+        <p>Site acolhedor e profissional para psicóloga com atendimento presencial e online em Floripa.</p>
+        <div class="portfolio-pills">
+          <span class="pill">Design acolhedor</span>
+          <span class="pill">Online/Presencial</span>
+          <span class="pill">Contato</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="preco">
+  <div class="preco-inner fade-up">
+    <p class="section-tag">Investimento</p>
+    <h2 class="section-title">Site profissional <em>a partir de</em></h2>
+    <div class="section-divider"></div>
+    <div class="preco-valor"><sup>R$</sup>997</div>
+    <p class="preco-desc">Projeto completo, moderno e responsivo.<br>Sem mensalidades obrigatórias.</p>
+    <div class="preco-features">
+      <span class="preco-feature">Design exclusivo</span>
+      <span class="preco-feature">100% responsivo</span>
+      <span class="preco-feature">Botão WhatsApp</span>
+      <span class="preco-feature">SEO básico</span>
+      <span class="preco-feature">Entrega rápida</span>
+    </div>
+    <a href="https://wa.me/5548999999999?text=Olá%2C%20quero%20contratar%20um%20site%20profissional." target="_blank" class="btn-dourado">💬 Solicitar meu site agora</a>
+  </div>
+</section>
+
+<section class="processo">
+  <div class="processo-header fade-up">
+    <p class="section-tag">Como funciona</p>
+    <h2 class="section-title">Simples e <em>transparente</em></h2>
+    <div class="section-divider"></div>
+  </div>
+  <div class="processo-grid">
+    <div class="processo-step">
+      <div class="passo-num">1</div>
+      <h3>Solicite um orçamento</h3>
+      <p>Entre em contato pelo WhatsApp e conte sobre o seu negócio.</p>
+    </div>
+    <div class="processo-step">
+      <div class="passo-num">2</div>
+      <h3>Enviamos uma proposta</h3>
+      <p>Apresentamos uma proposta personalizada para o seu projeto.</p>
+    </div>
+    <div class="processo-step">
+      <div class="passo-num">3</div>
+      <h3>Desenvolvemos seu site</h3>
+      <p>Nossa equipe cria o seu site com design exclusivo e moderno.</p>
+    </div>
+    <div class="processo-step">
+      <div class="passo-num">4</div>
+      <h3>Publicamos online</h3>
+      <p>Seu site vai ao ar e começa a trabalhar pelo seu negócio.</p>
+    </div>
+  </div>
+</section>
+
+<section class="cta-final">
+  <div class="cta-final-inner fade-up">
+    <p class="section-tag" style="justify-content:center;">Vamos começar</p>
+    <h2 class="section-title">Pronto para modernizar sua <em>presença online?</em></h2>
+    <div class="section-divider" style="margin-left:auto;margin-right:auto;"></div>
+    <p class="cta-final-sub">Solicite um orçamento sem compromisso. Respondemos em até 2 horas em dias úteis.</p>
+    <div class="cta-final-btns">
+      <a href="https://wa.me/5548999999999?text=Olá%2C%20quero%20solicitar%20um%20orçamento%20de%20site." target="_blank" class="btn-primary" style="padding:18px 36px;font-size:14px;">💬 Falar no WhatsApp agora</a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <a href="#" class="footer-logo">Sites<span>Floripa</span></a>
+  <div class="footer-mid">
+    <p class="footer-local">Florianópolis · SC · Brasil</p>
+    <a href="https://wa.me/5548999999999" target="_blank" class="footer-wa">💬 WhatsApp</a>
+  </div>
+  <p class="footer-copy">© 2025 Sites Floripa · Todos os direitos reservados</p>
+</footer>
+
+<script>
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) entry.target.classList.add('visible');
+    });
+  }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
+
+  document.querySelectorAll('.fade-up, .beneficio-card, .portfolio-card, .processo-step').forEach(el => observer.observe(el));
+
+  const nav = document.querySelector('nav');
+  window.addEventListener('scroll', () => {
+    if (window.scrollY > 60) {
+      nav.style.padding = window.innerWidth > 900 ? '12px 60px' : '12px 24px';
+      nav.style.boxShadow = '0 4px 24px rgba(0,0,0,0.06)';
+    } else {
+      nav.style.padding = window.innerWidth > 900 ? '20px 60px' : '18px 24px';
+      nav.style.boxShadow = 'none';
+    }
+  });
+</script>
+</body>
+</html>
