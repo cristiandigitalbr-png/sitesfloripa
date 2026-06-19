@@ -29,8 +29,7 @@ body{font-family:'Inter',sans-serif;background:var(--beige);color:var(--preto);f
 nav{position:fixed;top:0;left:0;right:0;z-index:100;padding:20px 60px;display:flex;justify-content:space-between;align-items:center;background:rgba(245,241,234,0.93);backdrop-filter:blur(10px);border-bottom:1px solid rgba(201,169,110,0.15);transition:all 0.3s;}
 .nav-logo{font-family:'Cormorant Garamond',serif;font-size:22px;font-weight:600;color:var(--preto);letter-spacing:0.5px;text-decoration:none;}
 .nav-logo span{color:var(--dourado);}
-.nav-cta{display:inline-flex;align-items:center;gap:8px;background:var(--preto);color:var(--branco);padding:11px 24px;border-radius:2px;font-size:12px;font-weight:500;letter-spacing:1.5px;text-transform:uppercase;text-decoration:none;transition:background 0.3s,transform 0.2s;}
-.nav-cta:hover{background:var(--dourado);transform:translateY(-1px);}
+
 
 .hero{min-height:100vh;display:grid;grid-template-columns:1fr 1fr;align-items:center;padding:120px 60px 80px;gap:60px;position:relative;overflow:hidden;}
 .hero::before{content:'';position:absolute;top:-200px;right:-200px;width:600px;height:600px;border-radius:50%;background:radial-gradient(circle,rgba(201,169,110,0.1) 0%,transparent 70%);pointer-events:none;}
@@ -93,8 +92,8 @@ section{padding:100px 60px;}
 .beneficio-card.visible{opacity:1;transform:translateY(0);}
 .beneficio-card:hover{box-shadow:0 8px 32px rgba(26,26,26,0.08);transform:translateY(-4px);}
 .beneficio-icon{width:48px;height:48px;background:var(--preto);border-radius:50%;display:flex;align-items:center;justify-content:center;margin:0 auto 18px;font-size:20px;}
-.beneficio-card h3{font-family:'Cormorant Garamond',serif;font-size:16px;font-weight:600;color:var(--preto);margin-bottom:8px;}
-.beneficio-card p{font-size:13px;line-height:1.6;color:var(--cinza);}
+.beneficio-card h3{font-family:'Cormorant Garamond',serif;font-size:19px;font-weight:600;color:var(--preto);margin-bottom:10px;}
+.beneficio-card p{font-size:15px;line-height:1.6;color:var(--cinza);}
 
 .portfolio{background:var(--beige);}
 .portfolio-header{text-align:center;}
@@ -118,7 +117,7 @@ section{padding:100px 60px;}
 .preco .section-title{color:var(--branco);}
 .preco .section-title em{color:var(--dourado);}
 .preco .section-divider{margin-left:auto;margin-right:auto;background:rgba(201,169,110,0.4);}
-.preco-valor{font-family:'Cormorant Garamond',serif;font-size:80px;font-weight:600;color:var(--dourado);line-height:1;letter-spacing:-2px;margin:24px 0 8px;}
+.preco-valor{font-family:'Cormorant Garamond',serif;font-size:80px;font-weight:600;color:var(--dourado);line-height:1;letter-spacing:-2px;margin:44px 0 24px;}
 .preco-valor sup{font-size:32px;vertical-align:super;letter-spacing:0;}
 .preco-desc{font-size:15px;color:rgba(255,255,255,0.55);margin-bottom:40px;line-height:1.6;}
 .preco-features{display:flex;gap:28px;justify-content:center;flex-wrap:wrap;margin-bottom:44px;}
@@ -183,7 +182,7 @@ footer{background:var(--preto);padding:48px 60px;display:flex;justify-content:sp
 
 <nav>
   <a href="#" class="nav-logo">Sites<span>Floripa</span></a>
-  <a href="https://wa.me/5548999999999?text=Olá%2C%20gostaria%20de%20solicitar%20um%20orçamento%20de%20site." target="_blank" class="nav-cta">💬 Solicitar orçamento</a>
+
 </nav>
 
 <section class="hero">
